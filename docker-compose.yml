@@ -5,14 +5,14 @@ services:
     #   context: ./frontend
     #   args:
     #     ON_PREMISE: "true"
-    image: onpremiseamplo.azurecr.io/mldevplatform_frontend:v1.0.3
+    image: onpremiseamplo.azurecr.io/mldevplatform_frontend:latest
     ports:
       - 3000:80
     networks:
       - amplo-net
   backend:
     # build: ./backend
-    image: onpremiseamplo.azurecr.io/mldevplatform_backend:v1.0.3
+    image: onpremiseamplo.azurecr.io/mldevplatform_backend:latest
     environment:
       - LOCAL_DB=True
       - POSTGRES_HOST=${POSTGRES_HOST}
